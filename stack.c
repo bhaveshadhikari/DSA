@@ -24,7 +24,7 @@ int peek(){
  
 void push(int data){
     if(isFull())
-        printf("stackoverflow\n");
+        printf("stack overflow\n");
     else
         stack_arr[++top]=data;
 }
@@ -51,6 +51,7 @@ int main() {
     printf("4. pop()\n");
     printf("5. peek()\n");
     printf("6. traverse()\n");
+    printf("7. quit\n");
     top:
     printf("enter choice: ");
     int choice;
@@ -84,6 +85,9 @@ int main() {
     case 6:
     traverse();
     goto top;
+     
+    case 7:
+    return 0;
  
     default:
      printf("!!invalid choice!!\n");
@@ -102,6 +106,7 @@ stack as ADT
 4. pop()
 5. peek()
 6. traverse()
+7. quit
 enter choice: 2
 isEmpty? : 1 
 enter choice: 3
@@ -112,7 +117,7 @@ enter choice: 3
 enter data to push: 6
 enter choice: 3
 enter data to push: 8
-stackoverflow
+stack overflow
 enter choice: 1
 isFull? : 1 
 enter choice: 4
@@ -123,4 +128,5 @@ enter choice: 6
 the elements are : 
 7
 9
+enter choice: 7
 */
